@@ -15,14 +15,14 @@ module mux4_tb();
   );
 
   initial begin
-    alu_out = 8'o1;
-    Bin = 8'o2;
-    Cin = 8'o3;
-    Din = 8'o4;
-    reg_sel4 = 2'o0;
-    #10 reg_sel4 = 2'o1;
-    #10 reg_sel4 = 2'o2;
-    #10 reg_sel4 = 2'o3;
+    alu_out = 8'd1;
+    Bin = 8'd2;
+    Cin = 8'd3;
+    Din = 8'd4;
+    reg_sel4 = 2'd0;
+    #10 reg_sel4 = 2'd1;
+    #10 reg_sel4 = 2'd2;
+    #10 reg_sel4 = 2'd3;
     #10 $finish;
   end
 endmodule
