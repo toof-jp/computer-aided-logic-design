@@ -1,12 +1,12 @@
 `timescale 1ns / 1ps
 
-module register( din, load, clk, reset, dout );
+module register( din, load, clock, reset, dout );
   input [7:0] din;
-  input load, clk, reset;
+  input load, clock, reset;
   output [7:0] dout;
   reg [7:0] dout;
 
-  always @( posedge clk or negedge reset )
+  always @( posedge clock or negedge reset )
   begin
     if ( reset == 1'b0 )
       dout <= 1'b0;

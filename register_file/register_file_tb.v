@@ -1,14 +1,14 @@
 module register_file_tb();
   reg [7:0] din;
   reg [2:0] read, write;
-  reg clk, reset;
+  reg clock, reset;
   wire [7:0] dout;
 
-  register_file reg1 ( din, read, write, clk, reset, dout );
+  register_file reg1 ( din, read, write, clock, reset, dout );
 
   always begin
-    clk = 1'b1; #50;
-    clk = 1'b0; #50;
+    clock = 1'b1; #50;
+    clock = 1'b0; #50;
   end
 
   initial begin

@@ -2,14 +2,14 @@
 
 module register_tb();
   reg [7:0] din;
-  reg load, clk, reset;
+  reg load, clock, reset;
   wire [7:0] dout;
 
-  register uut( din, load, clk, reset, dout );
+  register uut( din, load, clock, reset, dout );
 
   always begin
-    clk = 1'b0; #50;
-    clk = 1'b1; #50;
+    clock = 1'b0; #50;
+    clock = 1'b1; #50;
   end
 
   initial begin
